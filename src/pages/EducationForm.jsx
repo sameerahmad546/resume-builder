@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ResumeBuilderContext } from '../store/states';
 
-function EducationForm() {
+const  EducationForm = () => {
 
   const { educations, setEducations } = useContext(ResumeBuilderContext)
   const addEducation = () => {

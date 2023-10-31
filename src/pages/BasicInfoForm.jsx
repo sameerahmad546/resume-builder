@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ResumeBuilderContext } from '../store/states';
 
-function BasicInfoForm() {
+const BasicInfoForm =() => {
     const { basicInfo, setBasicInfo } = useContext(ResumeBuilderContext)
 
     const handleChange = (e) => {

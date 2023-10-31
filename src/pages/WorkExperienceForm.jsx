@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { ResumeBuilderContext } from '../store/states';
 
-function ExperienceForm() {
+const  ExperienceForm = () => {
     const { experience, setExperience } = useContext(ResumeBuilderContext)
 
     const handleChange = (e) => {

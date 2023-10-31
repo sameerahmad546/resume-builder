@@ -4,6 +4,7 @@ import BasicInfoForm from './pages/BasicInfoForm';
 import WorkExerienceForm from './pages/WorkExperienceForm'
 import EducationForm from './pages/EducationForm';
 import SkillsForm from './pages/SkillsForm';
+import ReadyResume from './pages/ReadyResume';
 import { ResumeBuilderProvider } from './store/states';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path='work-experience-form' element={<WorkExerienceForm />} />
           <Route path='education-form' element={<EducationForm />} />
           <Route path='skills-form' element={<SkillsForm />} />
+          <Route path='ready-resume' element={<ReadyResume/>} />
 
         </Routes>
       </ResumeBuilderProvider>

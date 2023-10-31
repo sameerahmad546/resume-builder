@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ResumeBuilderContext } from '../store/states';
 
-function SkillsForm() {
+const  SkillsForm = () => {
   const { skills, setSkills } = useContext(ResumeBuilderContext)
   const [newSkill, setNewSkill] = useState('');
 
@@ -59,7 +59,7 @@ function SkillsForm() {
           ))}
         </ul>
         <div className='w-full flex justify-end'>
-          <Link to="/ready-template">
+          <Link to="/ready-resume">
             <button className="bg-blue-700 rounded-md p-4 text-white mt-4">
               Move to Ready Resume
             </button>
