@@ -59,9 +59,9 @@ const  SkillsForm = () => {
           ))}
         </ul>
         <div className='w-full flex justify-end'>
-          <Link to="/ready-resume">
+          <Link to="/reorder-resume">
             <button className="bg-blue-700 rounded-md p-4 text-white mt-4">
-              Move to Ready Resume
+              Next
             </button>
           </Link>
         </div>
