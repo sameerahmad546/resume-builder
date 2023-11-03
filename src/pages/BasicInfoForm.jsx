@@ -14,6 +14,7 @@ const BasicInfoForm =() => {
     };
     return (
         <>
+        
             
             <div className="container mt-6 mx-auto p-5 border rounded-lg shadow">
                 <h2 className="text-lg font-semibold mb-4">Basic Information</h2>

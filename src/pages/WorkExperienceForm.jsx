@@ -1,10 +1,19 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 import { ResumeBuilderContext } from '../store/states';
 
 const  ExperienceForm = () => {
     const { experience, setExperience } = useContext(ResumeBuilderContext)
+
+    const token = JSON.parse(localStorage.getItem('user'))
+    console.log(token)
+    const location = useLocation();
+    const navigate = useNavigate()
+    const pathName = location.pathname
+    // if(token === null){
+    //     navigate('/login')
+    // }
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -13,6 +22,13 @@ const  ExperienceForm = () => {
             [name]: value,
         });
     };
+
+    // useEffect(()=>{
+    //     if(token === null){
+    //         navigate('/login')
+    //     }
+    // },[])
+
     return (
         <>
             <div className="container mt-6 mx-auto p-5 border rounded-lg shadow">

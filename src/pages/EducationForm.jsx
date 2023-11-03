@@ -24,7 +24,7 @@ const  EducationForm = () => {
 
   return (
     <>
-    <p>{JSON.stringify(educations)}</p>
+
       <div className="container mt-6 mx-auto p-5 border rounded-lg shadow">
         <h2 className="text-lg font-semibold mb-4">Education</h2>
         {educations.map((education, index) => (

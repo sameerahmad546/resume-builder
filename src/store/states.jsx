@@ -4,6 +4,9 @@ import { createContext, useState, useMemo } from 'react';
 export const ResumeBuilderContext = createContext();
 
 export function ResumeBuilderProvider({ children }) {
+
+  const [user, setUser] = useState(null);
+
   const [basicInfo, setBasicInfo] = useState({
     name: '',
     phone: '',
@@ -23,10 +26,13 @@ export function ResumeBuilderProvider({ children }) {
     { degree: '', university: '', graduationDate: '' },
   ]);
 
+
   const [skills, setSkills] = useState([]);
 
   const contextValue = useMemo(() => {
     return {
+      user,
+      setUser,
       basicInfo,
       setBasicInfo,
       experience,
@@ -34,9 +40,9 @@ export function ResumeBuilderProvider({ children }) {
       educations,
       setEducations,
       skills,
-      setSkills
+      setSkills,
     };
-  }, [basicInfo,experience,educations,skills]);
+  }, [basicInfo,experience,educations,skills,user]);
 
   return (
     <ResumeBuilderContext.Provider value={contextValue}>
