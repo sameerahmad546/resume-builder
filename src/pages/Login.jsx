@@ -26,7 +26,7 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("/api/auth/login", requestOptions);
+            const response = await fetch("https://resume-builder-backend-production.up.railway.app/api/auth/login", requestOptions);
             const result = await response.json();
             console.log(result)
             if(result.message === 'No user found'){

@@ -30,7 +30,7 @@ const Signup = () => {
         console.log(e)
         e.preventDefault();
         try {
-            const response = await fetch("/api/auth/register", requestOptions);
+            const response = await fetch("https://resume-builder-backend-production.up.railway.app/api/auth/register", requestOptions);
             const result = await response.json();
             console.log(result)
             if(result.message === 'User Created Successfully'){
