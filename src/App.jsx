@@ -19,7 +19,7 @@ function App() {
   const isSignUpOrLoginRoute = location.pathname === '/sign-up' || location.pathname === '/login';
 
   useEffect(() => {
-    if (token === null) {
+    if (token === null && !isSignUpOrLoginRoute) {
       navigate('/login');
     }
   }, []);

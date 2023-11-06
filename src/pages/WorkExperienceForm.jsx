@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import { ResumeBuilderContext } from '../store/states';
 
@@ -8,13 +8,6 @@ const  ExperienceForm = () => {
 
     const token = JSON.parse(localStorage.getItem('user'))
     console.log(token)
-    const location = useLocation();
-    const navigate = useNavigate()
-    const pathName = location.pathname
-    // if(token === null){
-    //     navigate('/login')
-    // }
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setExperience({
@@ -23,11 +16,6 @@ const  ExperienceForm = () => {
         });
     };
 
-    // useEffect(()=>{
-    //     if(token === null){
-    //         navigate('/login')
-    //     }
-    // },[])
 
     return (
         <>
